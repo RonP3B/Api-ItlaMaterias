@@ -2,7 +2,7 @@ const express = require("express");
 const subjects = require("./routes/subjects");
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = "itla-materias.netlify.app";
 
 app.use("/",subjects);
 
