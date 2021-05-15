@@ -13,6 +13,6 @@ app.set("port", port);
 app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(cors({ origin: "*" }));
-app.use("/",subjects);
+app.use("/api/carreras",subjects);
 
-app.listen(port, () => console.log(`Server running on ${port}...`))
+app.listen(port, () => console.log(`Server running on port ${port}...`))
