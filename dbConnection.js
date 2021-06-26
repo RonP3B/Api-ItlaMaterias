@@ -1,13 +1,14 @@
 const mysql = require("mysql");
+require('dotenv').config();
 
 let dbConnection;
 
 const handleDisconnect = () => {
   dbConnection = mysql.createConnection({
-    host: "ba8a9dodjjx67zfavtzj-mysql.services.clever-cloud.com",
-    database: "ba8a9dodjjx67zfavtzj",
-    user: "ux4r1oaqqo5hz52q",
-    password: "6ZNJnQ7CPy4EoMXbSdzO",
+    host: process.env.HOST,
+    database: process.env.DATABASE,
+    user: process.env.USER,
+    password: process.env.PASSWORD  
   });
 
   dbConnection.connect((err) => {
