@@ -5,7 +5,7 @@ const querySubjects = (subject, res) => {
   const sql = `select * from ${subject};`;
 
   const result = database.query(sql, (error, result) => {
-    if (error) throw error;
+    // if (error) throw error;
 
     if (result.length > 0)
       res.status(200).json({ response: true, data: result });
